@@ -1,0 +1,433 @@
+/*
+ * Psyerns AuctionHouse — admin styles.
+ * BEM-ish naming under `.psyern-ah-admin__*`.
+ * Uses WordPress admin colour tokens where possible.
+ */
+
+.psyern-ah-admin {
+	max-width: 1200px;
+}
+
+.psyern-ah-admin__title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 22px;
+	margin-bottom: 8px;
+}
+
+.psyern-ah-admin__title .dashicons {
+	font-size: 26px;
+	width: 26px;
+	height: 26px;
+	color: #2271b1;
+}
+
+/* ── Tabs ───────────────────────────────────────────────── */
+.psyern-ah-admin__tabs {
+	margin-top: 12px;
+}
+
+.psyern-ah-admin__tab-content {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-top: none;
+	padding: 24px;
+	border-radius: 0 0 4px 4px;
+}
+
+/* ── Cards ──────────────────────────────────────────────── */
+.psyern-ah-admin__card {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	padding: 20px 24px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+}
+
+.psyern-ah-admin__card h2,
+.psyern-ah-admin__card h3 {
+	margin-top: 0;
+	margin-bottom: 12px;
+	font-size: 15px;
+}
+
+.psyern-ah-admin__card--info {
+	border-left: 4px solid #2271b1;
+}
+
+.psyern-ah-admin__card--success {
+	border-left: 4px solid #00a32a;
+}
+
+.psyern-ah-admin__card--warn {
+	border-left: 4px solid #dba617;
+}
+
+.psyern-ah-admin__card--danger {
+	border-left: 4px solid #d63638;
+}
+
+.psyern-ah-admin__card--muted {
+	background: #f6f7f7;
+	border-color: #c3c4c7;
+}
+
+/* ── Sync indicator (upload-meta card) ───────────────────── */
+.psyern-ah-admin__sync {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 14px 18px;
+	border-radius: 6px;
+	border: 1px solid #c3c4c7;
+	margin-bottom: 20px;
+}
+
+.psyern-ah-admin__sync-header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 600;
+}
+
+.psyern-ah-admin__sync-dot {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 3px rgba(0, 0, 0, .06);
+}
+
+.psyern-ah-admin__sync-indicator--green .psyern-ah-admin__sync-dot {
+	background: #00a32a;
+}
+
+.psyern-ah-admin__sync-indicator--yellow .psyern-ah-admin__sync-dot {
+	background: #dba617;
+}
+
+.psyern-ah-admin__sync-indicator--red .psyern-ah-admin__sync-dot {
+	background: #d63638;
+}
+
+.psyern-ah-admin__sync-indicator--green {
+	background: #f0faf2;
+}
+
+.psyern-ah-admin__sync-indicator--yellow {
+	background: #fdf8ec;
+}
+
+.psyern-ah-admin__sync-indicator--red {
+	background: #fbeaea;
+}
+
+.psyern-ah-admin__sync-detail {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 8px 20px;
+	font-size: 13px;
+	color: #3c434a;
+}
+
+.psyern-ah-admin__sync-detail dt {
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.psyern-ah-admin__sync-detail dd {
+	margin: 0 0 4px;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+	word-break: break-all;
+}
+
+/* ── Action rows ────────────────────────────────────────── */
+.psyern-ah-admin__action-row {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-wrap: wrap;
+	margin: 8px 0;
+}
+
+.psyern-ah-admin__action-row code {
+	flex: 1 1 auto;
+	padding: 6px 10px;
+	background: #f0f0f1;
+	border-radius: 3px;
+	word-break: break-all;
+	font-size: 12px;
+	user-select: all;
+}
+
+/* ── Tables ─────────────────────────────────────────────── */
+.psyern-ah-admin__table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.psyern-ah-admin__table th,
+.psyern-ah-admin__table td {
+	padding: 10px 12px;
+	border-bottom: 1px solid #e0e0e0;
+	font-size: 13px;
+	vertical-align: top;
+	text-align: left;
+}
+
+.psyern-ah-admin__table thead th {
+	background: #f6f7f7;
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.psyern-ah-admin__table tbody tr:hover {
+	background: #fafafa;
+}
+
+.psyern-ah-admin__table code {
+	font-size: 12px;
+	color: #1d2327;
+	background: #f0f0f1;
+	padding: 1px 6px;
+	border-radius: 3px;
+}
+
+.psyern-ah-admin__table-empty {
+	padding: 40px;
+	text-align: center;
+	color: #646970;
+}
+
+.psyern-ah-admin__filters {
+	display: flex;
+	gap: 10px;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	margin-bottom: 16px;
+	padding: 12px 14px;
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+}
+
+.psyern-ah-admin__filter {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.psyern-ah-admin__filter label {
+	font-size: 12px;
+	font-weight: 600;
+	color: #3c434a;
+}
+
+/* ── Badges ─────────────────────────────────────────────── */
+.psyern-ah-admin__badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 12px;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.6;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	background: #f0f0f1;
+	color: #3c434a;
+	border: 1px solid #dcdcde;
+}
+
+.psyern-ah-admin__badge--queued {
+	background: #f0f6fc;
+	color: #2271b1;
+	border-color: #c5d9ed;
+}
+
+.psyern-ah-admin__badge--dispatched,
+.psyern-ah-admin__badge--executing {
+	background: #fdf8ec;
+	color: #996800;
+	border-color: #f0d48a;
+}
+
+.psyern-ah-admin__badge--success {
+	background: #edfaef;
+	color: #007017;
+	border-color: #a4e0b3;
+}
+
+.psyern-ah-admin__badge--failed {
+	background: #fbeaea;
+	color: #a00;
+	border-color: #e7b2b2;
+}
+
+.psyern-ah-admin__badge--type {
+	background: #eef0f2;
+	color: #1d2327;
+}
+
+/* ── Pagination ─────────────────────────────────────────── */
+.psyern-ah-admin__pagination {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	justify-content: flex-end;
+	margin-top: 16px;
+	flex-wrap: wrap;
+}
+
+.psyern-ah-admin__pagination a,
+.psyern-ah-admin__pagination span {
+	padding: 4px 10px;
+	border: 1px solid #c3c4c7;
+	border-radius: 3px;
+	background: #fff;
+	color: #2271b1;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.psyern-ah-admin__pagination span.is-current {
+	background: #2271b1;
+	color: #fff;
+	border-color: #2271b1;
+}
+
+.psyern-ah-admin__pagination a:hover {
+	background: #f0f6fc;
+}
+
+/* ── Key-rotate card ────────────────────────────────────── */
+.psyern-ah-admin__key-row {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.psyern-ah-admin__key-row code {
+	flex: 1 1 auto;
+	min-width: 0;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+	background: #f0f0f1;
+	padding: 6px 10px;
+	border-radius: 3px;
+	word-break: break-all;
+}
+
+/* ── Item-map preview table ─────────────────────────────── */
+.psyern-ah-admin__item-preview {
+	width: 100%;
+	margin-top: 14px;
+	border-collapse: collapse;
+}
+
+.psyern-ah-admin__item-preview th,
+.psyern-ah-admin__item-preview td {
+	padding: 8px 10px;
+	border-bottom: 1px solid #e0e0e0;
+	font-size: 12px;
+	text-align: left;
+}
+
+.psyern-ah-admin__item-preview thead th {
+	background: #f6f7f7;
+	font-weight: 600;
+}
+
+.psyern-ah-admin__item-preview img {
+	width: 32px;
+	height: 32px;
+	object-fit: contain;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	background: #f6f7f7;
+}
+
+.psyern-ah-admin__rarity {
+	display: inline-block;
+	padding: 1px 8px;
+	border-radius: 10px;
+	font-size: 10px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .04em;
+}
+
+.psyern-ah-admin__rarity--common {
+	background: #e0e0e0;
+	color: #1d2327;
+}
+
+.psyern-ah-admin__rarity--uncommon {
+	background: #d8efe0;
+	color: #0d4d1e;
+}
+
+.psyern-ah-admin__rarity--rare {
+	background: #d5e4f6;
+	color: #1c4f8a;
+}
+
+.psyern-ah-admin__rarity--epic {
+	background: #ebddf3;
+	color: #5e2a7d;
+}
+
+.psyern-ah-admin__rarity--legendary {
+	background: #fceedf;
+	color: #8a4e0c;
+}
+
+/* ── Danger zone (Tools tab) ────────────────────────────── */
+.psyern-ah-admin__danger {
+	background: #fff5f5;
+	border: 1px solid #f4b0b0;
+	border-radius: 4px;
+	padding: 16px 20px;
+	margin-top: 24px;
+}
+
+.psyern-ah-admin__danger h2 {
+	color: #a00;
+	margin-top: 0;
+	margin-bottom: 8px;
+	font-size: 15px;
+}
+
+.psyern-ah-admin__danger p {
+	color: #5a1f1f;
+	margin: 0 0 12px;
+}
+
+/* ── JSON editor ────────────────────────────────────────── */
+.psyern-ah-admin__json-editor {
+	width: 100%;
+	min-height: 260px;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+	line-height: 1.5;
+	background: #1d2327;
+	color: #d4d4d4;
+	border: 1px solid #1d2327;
+	border-radius: 4px;
+	padding: 12px;
+	box-sizing: border-box;
+}
+
+.psyern-ah-admin__json-editor:focus {
+	outline: 2px solid #2271b1;
+	outline-offset: -2px;
+}
+
+.psyern-ah-admin__help {
+	color: #646970;
+	font-size: 12px;
+	margin-top: 6px;
+}
