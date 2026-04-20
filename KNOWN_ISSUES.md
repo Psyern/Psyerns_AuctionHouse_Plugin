@@ -1,31 +1,16 @@
 # Psyerns AuctionHouse — Known Issues (v1.0.0)
 
-Four documented v1 limits. All are deliberate scope-calls, not bugs. Each entry has an
-impact description, any workaround, and the planned resolution path.
+Three documented v1 limits. All are deliberate scope-calls, not bugs. Each entry has
+an impact description, any workaround, and the planned resolution path.
 
----
-
-## 1. Steam-UID helper is privately duplicated in two classes
-
-**Description.** `Psyern_AH_Listings::get_current_steam_uid()` and
-`Psyern_AH_Pending_Actions::get_steam_uid_for_current_user()` are two near-identical
-private methods that query the `*_psyern_ah_users` table for the Steam-UID of the
-currently logged-in WordPress user.
-
-**Impact.** Pure code redundancy. Both methods are correctness-equivalent; no behavior
-drift has been observed. Risk is future maintenance: a fix to one must be ported to the
-other.
-
-**Workaround.** None needed; both work correctly today.
-
-**Planned resolution (v1.1).** Consolidate into
-`Psyern_AH_Auth::get_current_steam_uid()` as a public static method. Update both
-service classes to call the shared helper. Backport-safe because the behavior is
-identical.
+Item #1 (Steam-UID helper redundancy in Listings + Pending-Actions) was resolved in
+the same v1.0.0 release — see Changelog.
 
 ---
 
 ## 2. Outbid-history not tracked — `/user/bids` can hide listings
+
+## 1. Outbid-history not tracked — `/user/bids` can hide listings
 
 **Description.** `GET /user/bids` (the handler behind `[psyerns_auctionhouse_my]`
 bid list) selects listings WHERE `current_bidder_uid = <me>`. If User A bids, is
@@ -49,7 +34,7 @@ dispatched to the mod.
 
 ---
 
-## 3. Two admin actions use `admin_post_*` instead of REST
+## 2. Two admin actions use `admin_post_*` instead of REST
 
 **Description.** Force-Resync and Reset-Data are wired through
 `add_action('admin_post_psyern_ah_force_resync', ...)` and
@@ -69,7 +54,7 @@ without removing the existing `admin_post_*` handlers.
 
 ---
 
-## 4. Price-history buckets are not zero-filled
+## 3. Price-history buckets are not zero-filled
 
 **Description.** `GET /public/price-history?item_class=...&period=...` returns only
 buckets that contain at least one sale. Empty windows (e.g. a 30-day chart with one

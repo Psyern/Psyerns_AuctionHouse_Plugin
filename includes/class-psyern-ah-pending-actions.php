@@ -332,34 +332,6 @@ class Psyern_AH_Pending_Actions {
 	// ----------------------------------------------------------------------
 
 	/**
-	 * Return the Steam-UID for the currently authenticated WP user, or null if
-	 * the user is not logged in / not linked to a Steam account.
-	 *
-	 * @return string|null
-	 */
-	private function get_steam_uid_for_current_user() {
-		global $wpdb;
-
-		$wp_user_id = (int) get_current_user_id();
-		if ( $wp_user_id <= 0 ) {
-			return null;
-		}
-
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
-		$uid = $wpdb->get_var(
-			$wpdb->prepare(
-				'SELECT steam_uid FROM ' . $this->users_table() . ' WHERE wp_user_id = %d LIMIT 1',
-				$wp_user_id
-			)
-		);
-
-		if ( null === $uid || '' === $uid ) {
-			return null;
-		}
-		return (string) $uid;
-	}
-
-	/**
 	 * Sliding-window rate-limit using WordPress transients.
 	 *
 	 * Key: psyern_ah_rl_{wp_user_id}_{action_type}.
@@ -845,8 +817,8 @@ class Psyern_AH_Pending_Actions {
 		if ( $wp_user_id <= 0 ) {
 			return $this->error_response( 'not_logged_in', 'Login required.', 401 );
 		}
-		$steam_uid = $this->get_steam_uid_for_current_user();
-		if ( null === $steam_uid || '' === $steam_uid ) {
+		$steam_uid = Psyern_AH_Auth::get_current_steam_uid();
+		if ( '' === $steam_uid ) {
 			return $this->error_response( 'not_linked', 'Steam account not linked.', 403 );
 		}
 		return array( $wp_user_id, $steam_uid );

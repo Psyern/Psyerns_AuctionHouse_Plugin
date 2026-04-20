@@ -138,4 +138,36 @@ class Psyern_AH_Auth {
 	public static function get_api_key() {
 		return (string) get_option( self::OPTION_NAME, '' );
 	}
+
+	/**
+	 * Resolve the current WP user's linked Steam UID via the users mapping
+	 * table. Single source of truth for UID lookups across service classes.
+	 *
+	 * @return string Steam UID, or '' when no user is logged in, the user has
+	 *                no Steam link, or the mapping table is unavailable.
+	 */
+	public static function get_current_steam_uid() {
+		$wp_user_id = (int) get_current_user_id();
+		if ( $wp_user_id <= 0 ) {
+			return '';
+		}
+
+		if ( ! class_exists( 'Psyern_AH_Database' ) ) {
+			return '';
+		}
+
+		global $wpdb;
+
+		$table = Psyern_AH_Database::get_table_name( 'users' );
+
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+		$uid = $wpdb->get_var(
+			$wpdb->prepare(
+				'SELECT steam_uid FROM `' . $table . '` WHERE wp_user_id = %d LIMIT 1',
+				$wp_user_id
+			)
+		);
+
+		return $uid ? (string) $uid : '';
+	}
 }

@@ -503,7 +503,7 @@ class Psyern_AH_Listings {
 		unset( $request );
 		global $wpdb;
 
-		$steam_uid = $this->get_current_steam_uid();
+		$steam_uid = Psyern_AH_Auth::get_current_steam_uid();
 		if ( '' === $steam_uid ) {
 			return new WP_REST_Response(
 				array(
@@ -562,7 +562,7 @@ class Psyern_AH_Listings {
 		unset( $request );
 		global $wpdb;
 
-		$steam_uid = $this->get_current_steam_uid();
+		$steam_uid = Psyern_AH_Auth::get_current_steam_uid();
 		if ( '' === $steam_uid ) {
 			return new WP_REST_Response(
 				array(
@@ -876,32 +876,6 @@ class Psyern_AH_Listings {
 			return $val;
 		}
 		return 'newest';
-	}
-
-	/**
-	 * Resolve the current WP user's linked Steam UID from the users mapping table.
-	 *
-	 * @return string Steam UID, or '' if not linked.
-	 */
-	private function get_current_steam_uid() {
-		global $wpdb;
-
-		$wp_user_id = get_current_user_id();
-		if ( 0 === $wp_user_id ) {
-			return '';
-		}
-
-		$table = Psyern_AH_Database::get_table_name( 'users' );
-
-		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
-		$uid = $wpdb->get_var(
-			$wpdb->prepare(
-				'SELECT steam_uid FROM `' . $table . '` WHERE wp_user_id = %d LIMIT 1',
-				$wp_user_id
-			)
-		);
-
-		return $uid ? (string) $uid : '';
 	}
 
 	/**
