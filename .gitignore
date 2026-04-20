@@ -1,0 +1,35 @@
+# Composer (if ever added for build tooling)
+/vendor/composer/
+/composer.lock
+
+# Node / build tooling (if ever added)
+/node_modules/
+/build/
+/dist/
+
+# Local WordPress / environment
+.env
+.env.local
+wp-config.php
+wp-content/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+.phpunit.result.cache
+phpunit.xml
+/coverage/
+
+# Logs
+*.log
+
+# NOTE: public/vendor/chart.min.js is intentionally tracked — it is the
+# runtime dependency Chart.js 4.4.1, shipped with the plugin to avoid any
+# CDN requirement. Do NOT add public/vendor/ to this ignore list.
