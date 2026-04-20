@@ -1,0 +1,45 @@
+{
+	"generatedAt": "2026-04-20T14:00:00Z",
+	"serverTimeEpoch": 1713621600,
+	"currencyMode": "Expansion",
+	"listings": [
+		{
+			"ListingID": "test_1712233412_84592",
+			"SellerUID": "76561198000000001",
+			"SellerName": "TestSeller",
+			"ItemClassName": "M4A1_AssaultRifle",
+			"ItemDisplayName": "M4-A1 Sturmgewehr",
+			"CategoryID": 1,
+			"ListingType": 0,
+			"StartPrice": 0,
+			"BuyNowPrice": 5000,
+			"CurrentBid": 0,
+			"CurrentBidderUID": "",
+			"CurrentBidderName": "",
+			"BidCount": 0,
+			"CreatedTimestamp": 1713621000,
+			"ExpiresTimestamp": 1713708000,
+			"Status": 0
+		}
+	],
+	"recentTransactions": [
+		{
+			"TransactionID": "test_tx_1",
+			"ListingID": "test_1712233412_84591",
+			"SellerUID": "76561198000000001",
+			"SellerName": "TestSeller",
+			"BuyerUID": "76561198000000002",
+			"BuyerName": "TestBuyer",
+			"ItemClassName": "AKM",
+			"ItemDisplayName": "AKM",
+			"FinalPrice": 3500,
+			"Fee": 175,
+			"Type": 0,
+			"Timestamp": 1713620000
+		}
+	],
+	"balances": [
+		{ "uid": "76561198000000001", "source": "Expansion", "balance": 12340 },
+		{ "uid": "76561198000000002", "source": "Expansion", "balance": 5000 }
+	]
+}

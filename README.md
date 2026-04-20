@@ -426,10 +426,15 @@ WP-Plugin_Psyerns_AuctionHouse/
 | 15 | Sync-Modus | **Full-Sync** — Mod sendet bei jedem Push alle aktiven Listings. WP upsert-ersetzt. Transaktionen nur delta (seit `last_transaction_ts`). |
 | 16 | Preis-Graph | **C** — auf Listing-Detail automatisch + Stats-Tab „Preis-Trends" mit Item-Dropdown + freier Shortcode `[psyerns_auctionhouse_price_chart]`. Rendering via Chart.js. Zeiträume: 24h/7d/30d/all. Metriken: Ø-Preis (Linie) + Min/Max (Band) + Verkaufsanzahl (Bars). |
 
-## 14. Offene Technik-Details (können im Plan gelöst werden)
+## 14. Offene Technik-Details
 
-- [ ] Paket-Größe des Pushes bei sehr vielen Listings (>500) — ggf. Pagination im Upload oder `gzip`-Request-Body.
-- [ ] Item-Map-JSON Struktur (`{ "item_class": { "icon_url": "...", "rarity": "..." } }`) — finales Schema im Implementierungs-Plan.
+**In v1 gelöst:**
+- [x] Paket-Größe des Pushes — kein Pagination/gzip in v1; Soft-Warn-Log wenn Payload > 1 MB (realistisch 20-60 KB bei 50-200 Listings). Bei echten Problemen nachrüsten.
+- [x] Item-Map-JSON — finalisiertes Schema: `{ version:1, default_icon_url, items: { "<item_class>": { display_name?, icon_url, rarity?, category_hint? } } }`. `rarity` steuert Card-Border-Farbe (common/uncommon/rare/epic/legendary).
+
+**Für v2 zurückgestellt:**
+- [ ] **Bid-History-Tabelle.** `handle_get_user_bids` zeigt aktuell nur Listings wo User noch `current_bidder_uid` ist — wenn User überboten wird und ein Dritter erneut überbietet, fällt das Listing aus der Liste. Echte Bid-Participation-Feeds brauchen entweder eine neue `psyern_ah_bid_history`-Tabelle oder Mod-seitigen Delta-Upload von Bids.
+- [ ] **Steam-UID-Helper konsolidieren.** Phase-2-Agenten (Listings, Pending-Actions) haben beide privat `get_current_steam_uid()` implementiert. In `Psyern_AH_Auth::get_current_steam_uid()` hochziehen.
 
 ---
 

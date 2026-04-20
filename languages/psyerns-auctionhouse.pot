@@ -1,0 +1,1235 @@
+# Copyright (C) 2026 Psyern
+# This file is distributed under the MIT license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Psyerns AuctionHouse 1.0.0\n"
+"Report-Msgid-Bugs-To: https://deadmansecho.com\n"
+"Last-Translator: Psyern <info@kaiser-studios.de>\n"
+"Language-Team: Deadmans Echo <info@kaiser-studios.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: psyerns-framework-extractor\n"
+"X-Domain: psyerns-auctionhouse\n"
+
+#: admin/views/listings-page.php:95
+msgid "#"
+msgstr ""
+
+#: public/templates/stats.php:132
+msgid "%1$d Verkäufe · Ø %2$s"
+msgstr ""
+
+#: public/templates/history.php:41
+msgid "%d Eintrag"
+msgid_plural "%d Einträge"
+msgstr[0] ""
+msgstr[1] ""
+
+#: public/templates/listing-card.php:127
+msgid "%d Gebot"
+msgid_plural "%d Gebote"
+msgstr[0] ""
+msgstr[1] ""
+
+#: public/templates/marketplace.php:160
+msgid "%d aktives Listing"
+msgid_plural "%d aktive Listings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: public/templates/history.php:108
+msgid "(Gebühr %s)"
+msgstr ""
+
+#: admin/views/settings-page.php:114
+msgid "(noch kein Key)"
+msgstr ""
+
+#: public/templates/stats.php:27
+msgid "24 Stunden"
+msgstr ""
+
+#: public/templates/price-chart.php:43
+msgid "24h"
+msgstr ""
+
+#: public/templates/stats.php:29
+msgid "30 Tage"
+msgstr ""
+
+#: public/templates/price-chart.php:45
+msgid "30d"
+msgstr ""
+
+#: public/templates/stats.php:28
+msgid "7 Tage"
+msgstr ""
+
+#: public/templates/price-chart.php:44
+msgid "7d"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1081
+msgid "API key rotated. New key: %s — update the DayZ mod config immediately."
+msgstr ""
+
+#: admin/views/settings-page.php:103
+msgid "API-Key (Mod → WordPress)"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:597
+msgid "Abbrechen"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:785
+#: public/templates/history.php:27
+msgid "Abgebrochen"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:783
+#: public/templates/history.php:26
+msgid "Abgelaufen"
+msgstr ""
+
+#: admin/views/listings-page.php:103
+msgid "Ablauf"
+msgstr ""
+
+#: admin/views/balances-page.php:88
+msgid "Absteigend"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:797
+#: admin/views/listings-page.php:120
+msgid "Active"
+msgstr ""
+
+#: admin/views/listings-page.php:179
+msgid "Admin-Cancel"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1119
+msgid "Admin-Cancel failed: %1$s — %2$s"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1129
+msgid "Admin-Cancel queued for listing %1$s (uuid: %2$s). Items will be returned to the seller."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1102
+msgid "Admin-Cancel: missing listing_id or seller_uid."
+msgstr ""
+
+#: admin/views/listings-page.php:104
+#: admin/views/pending-page.php:97
+msgid "Aktion"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:779
+msgid "Aktiv"
+msgstr ""
+
+#: public/templates/listing-card.php:53
+#: public/templates/listing-card.php:59
+#: public/templates/listing-detail.php:133
+msgid "Aktuelles Gebot"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1235
+msgid "All plugin data (listings, transactions, balances, pending actions, users) has been wiped. Plugin options kept."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:940
+msgid "All sources"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:796
+msgid "All statuses"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:877
+msgid "All types"
+msgstr ""
+
+#: admin/views/pending-page.php:87
+#: admin/views/pending-page.php:99
+#: public/templates/marketplace.php:88
+msgid "Alle"
+msgstr ""
+
+#: admin/views/tools-page.php:94
+msgid "Alle AuctionHouse-Transients"
+msgstr ""
+
+#: public/templates/marketplace.php:74
+msgid "Alle Kategorien"
+msgstr ""
+
+#: admin/views/tools-page.php:120
+msgid "Alle Plugin-Daten leeren"
+msgstr ""
+
+#: public/templates/marketplace.php:147
+msgid "Anwenden"
+msgstr ""
+
+#: admin/views/settings-page.php:254
+msgid "Anzeige-Name"
+msgstr ""
+
+#: admin/views/listings-page.php:116
+msgid "Auction"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:149
+msgid "AuctionHouse"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:879
+msgid "AuctionWon"
+msgstr ""
+
+#: admin/views/balances-page.php:89
+msgid "Aufsteigend"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:763
+#: public/templates/history.php:25
+#: public/templates/listing-card.php:69
+#: public/templates/marketplace.php:96
+msgid "Auktion"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:765
+#: public/templates/listing-card.php:70
+msgid "Auktion + Sofortkauf"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1071
+msgid "Auth service unavailable — cannot rotate API key."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:603
+#: public/templates/my.php:61
+msgid "Balances"
+msgstr ""
+
+#: admin/views/balances-page.php:51
+msgid "Balances-Service noch nicht geladen (Phase 2 nicht aktiv). Ansicht leer bis Service bereit ist."
+msgstr ""
+
+#: admin/views/settings-page.php:108
+msgid "Bearer-Key für alle /internal/* Routen. REST-Base: %s"
+msgstr ""
+
+#: public/templates/stats.php:69
+msgid "Beliebteste Items"
+msgstr ""
+
+#: admin/views/tools-page.php:115
+msgid "Bestätigung:"
+msgstr ""
+
+#: admin/views/pending-page.php:142
+msgid "Betrag"
+msgstr ""
+
+#: admin/views/history-page.php:75
+#: admin/views/pending-page.php:113
+msgid "Bis"
+msgstr ""
+
+#: public/templates/history.php:50
+msgid "Bisher keine abgeschlossenen Transaktionen."
+msgstr ""
+
+#: public/templates/listing-detail.php:177
+msgid "Bitte Steam-Konto verknüpfen, um zu kaufen oder zu bieten."
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:601
+msgid "Bitte Steam-Konto verknüpfen."
+msgstr ""
+
+#: public/templates/listing-detail.php:173
+msgid "Bitte einloggen (Steam), um zu kaufen oder zu bieten."
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:600
+msgid "Bitte einloggen, um fortzufahren."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:878
+#: admin/views/listings-page.php:115
+msgid "BuyNow"
+msgstr ""
+
+#: admin/views/listings-page.php:117
+msgid "BuyNow+Auction"
+msgstr ""
+
+#: admin/views/tools-page.php:63
+msgid "Caches leeren"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:547
+msgid "Cancel this listing? Items will be returned to the seller via pending-pickup."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:800
+#: admin/class-psyern-ah-admin.php:881
+#: admin/views/listings-page.php:123
+msgid "Cancelled"
+msgstr ""
+
+#: admin/views/settings-page.php:289
+msgid "Categories (JSON)"
+msgstr ""
+
+#: admin/views/settings-page.php:293
+msgid "Categories JSON"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:496
+msgid "Categories: JSON is not valid (parser failed). Previous value kept."
+msgstr ""
+
+#: admin/views/settings-page.php:256
+msgid "Category Hint"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1194
+msgid "Cleared: %s"
+msgstr ""
+
+#: admin/views/pending-page.php:147
+msgid "Completed"
+msgstr ""
+
+#: admin/views/pending-page.php:145
+msgid "Created"
+msgstr ""
+
+#: admin/views/tools-page.php:102
+msgid "Danger-Zone — Plugin-Daten zurücksetzen"
+msgstr ""
+
+#: admin/views/settings-page.php:190
+msgid "Darstellung"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1221
+msgid "Database helper not loaded — cannot reset."
+msgstr ""
+
+#: admin/views/pending-page.php:76
+msgid "Database-Helper noch nicht geladen (Phase 2 nicht aktiv). Ansicht leer bis Service bereit ist."
+msgstr ""
+
+#: admin/views/settings-page.php:193
+msgid "Default-Theme"
+msgstr ""
+
+#: public/templates/listing-detail.php:223
+msgid "Dein Gebot (min. %s)"
+msgstr ""
+
+#: public/templates/my.php:39
+msgid "Dein WordPress-Konto ist noch nicht mit einem Steam-Konto verknüpft. Verknüpfe dein Konto, um Listings, Gebote und Balances zu sehen."
+msgstr ""
+
+#: public/templates/listing-detail.php:181
+msgid "Dies ist dein Listing."
+msgstr ""
+
+#: public/templates/listing-detail.php:169
+msgid "Dieses Listing ist nicht mehr aktiv."
+msgstr ""
+
+#: admin/views/pending-page.php:146
+msgid "Dispatched"
+msgstr ""
+
+#: public/templates/my.php:94
+msgid "Du hast aktuell keine aktiven Gebote."
+msgstr ""
+
+#: public/templates/my.php:84
+msgid "Du hast aktuell keine aktiven Listings."
+msgstr ""
+
+#: admin/views/settings-page.php:297
+msgid "Einstellungen speichern"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:605
+msgid "Erfolgreich"
+msgstr ""
+
+#: public/templates/my.php:64
+msgid "Expansion"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:941
+msgid "Expansion (ATM wallet)"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:799
+#: admin/class-psyern-ah-admin.php:880
+#: admin/views/listings-page.php:122
+msgid "Expired"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:593
+msgid "Fehler beim Laden."
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:606
+msgid "Fehlgeschlagen"
+msgstr ""
+
+#: admin/views/balances-page.php:101
+#: admin/views/history-page.php:87
+#: admin/views/listings-page.php:76
+#: admin/views/pending-page.php:119
+msgid "Filtern"
+msgstr ""
+
+#: admin/views/tools-page.php:50
+msgid "Flag ist derzeit aktiv."
+msgstr ""
+
+#: admin/views/tools-page.php:39
+msgid "Force Re-Sync"
+msgstr ""
+
+#: admin/views/tools-page.php:57
+msgid "Force Re-Sync anfordern"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1154
+msgid "Force Re-Sync flag set (TTL %d s). The mod will read the flag on its next push."
+msgstr ""
+
+#: admin/views/settings-page.php:158
+msgid "Formatierung & Intervalle"
+msgstr ""
+
+#: includes/class-psyern-ah-listings.php:601
+#: public/class-psyern-ah-shortcodes.php:612
+msgid "Führend"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:596
+#: public/templates/listing-detail.php:240
+msgid "Gebot abgeben"
+msgstr ""
+
+#: public/templates/listing-detail.php:153
+msgid "Gebote"
+msgstr ""
+
+#: admin/views/history-page.php:113
+msgid "Gebühr"
+msgstr ""
+
+#: public/templates/price-chart.php:46
+#: public/templates/stats.php:30
+msgid "Gesamt"
+msgstr ""
+
+#: public/templates/stats.php:90
+msgid "Gesamt-Umsatz"
+msgstr ""
+
+#: includes/class-psyern-ah-listings.php:597
+#: public/class-psyern-ah-shortcodes.php:614
+msgid "Gewonnen"
+msgstr ""
+
+#: admin/views/balances-page.php:80
+#: admin/views/balances-page.php:123
+msgid "Guthaben"
+msgstr ""
+
+#: admin/views/tools-page.php:68
+msgid "Hinweis: Wird ein Object-Cache (Redis/Memcached) verwendet, können WordPress-Transients nicht per LIKE-Query gelöscht werden. In diesem Fall hilft ein globales wp_cache_flush() des Servers."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:599
+msgid "History"
+msgstr ""
+
+#: admin/views/settings-page.php:219
+msgid "History (abgeschlossene Transaktionen)"
+msgstr ""
+
+#: public/templates/listing-detail.php:159
+msgid "Höchstbieter"
+msgstr ""
+
+#: admin/views/settings-page.php:252
+msgid "Icon"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:602
+msgid "In Warteschlange"
+msgstr ""
+
+#: public/templates/my.php:70
+msgid "Internal"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:942
+msgid "Internal (PlayerData.json)"
+msgstr ""
+
+#: includes/class-psyern-ah-stats.php:468
+msgid "Invalid period. Allowed: 24h, 7d, 30d, all."
+msgstr ""
+
+#: includes/class-psyern-ah-stats.php:323
+msgid "Invalid section parameter."
+msgstr ""
+
+#: admin/views/settings-page.php:244
+msgid "Invalide Eingaben werden abgelehnt — der vorherige Wert bleibt erhalten."
+msgstr ""
+
+#: admin/views/history-page.php:109
+#: admin/views/listings-page.php:98
+#: public/templates/history.php:57
+#: public/templates/stats.php:152
+msgid "Item"
+msgstr ""
+
+#: public/templates/stats.php:190
+msgid "Item auswählen"
+msgstr ""
+
+#: admin/views/settings-page.php:253
+msgid "Item-Klasse"
+msgstr ""
+
+#: admin/views/settings-page.php:237
+msgid "Item-Map (JSON)"
+msgstr ""
+
+#: admin/views/settings-page.php:241
+msgid "Item-Map JSON"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:475
+msgid "Item-Map saved."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:435
+msgid "Item-Map: \"%1$s\" has invalid rarity. Allowed: %2$s. Previous value kept."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:451
+msgid "Item-Map: \"%s\" category_hint must be a string. Previous value kept."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:419
+msgid "Item-Map: \"%s\" display_name must be a string. Previous value kept."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:404
+msgid "Item-Map: \"%s\" has an invalid icon_url. Previous value kept."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:366
+msgid "Item-Map: \"default_icon_url\" is not a valid URL. Previous value kept."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:373
+msgid "Item-Map: \"items\" must be an object. Previous value kept."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:353
+msgid "Item-Map: JSON is not valid (parser failed). Previous value kept."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:471
+msgid "Item-Map: could not re-encode JSON. Previous value kept."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:388
+msgid "Item-Map: entry \"%s\" is not an object. Previous value kept."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:358
+msgid "Item-Map: missing or unsupported \"version\" (must be 1). Previous value kept."
+msgstr ""
+
+#: public/templates/marketplace.php:60
+msgid "Item-Name …"
+msgstr ""
+
+#: public/templates/my.php:42
+msgid "Jetzt Steam verknüpfen"
+msgstr ""
+
+#: public/templates/listing-detail.php:204
+msgid "Jetzt kaufen für %s"
+msgstr ""
+
+#: admin/views/listings-page.php:99
+#: public/templates/marketplace.php:67
+msgid "Kategorie"
+msgstr ""
+
+#: admin/views/settings-page.php:291
+msgid "Kategorienliste – entweder { \"1\": \"Weapons\" } oder [ { \"id\":1, \"label\":\"Weapons\" } ]. Wird im Marketplace-Filter verwendet."
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:598
+msgid "Kauf bestätigen?"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:309
+msgid "Kein Listing ausgewählt. Bitte id=\"...\" angeben oder die Detailseite über einen Listing-Link aufrufen."
+msgstr ""
+
+#: admin/views/balances-page.php:130
+msgid "Keine Balances gefunden."
+msgstr ""
+
+#: public/templates/stats.php:82
+#: public/templates/stats.php:110
+#: public/templates/stats.php:147
+msgid "Keine Daten für diesen Zeitraum."
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:594
+msgid "Keine Ergebnisse."
+msgstr ""
+
+#: admin/views/listings-page.php:110
+msgid "Keine Listings gefunden."
+msgstr ""
+
+#: admin/views/pending-page.php:153
+msgid "Keine Pending-Actions gefunden."
+msgstr ""
+
+#: admin/views/history-page.php:119
+msgid "Keine Transaktionen gefunden."
+msgstr ""
+
+#: public/templates/marketplace.php:170
+msgid "Keine aktiven Auktionen."
+msgstr ""
+
+#: public/templates/my.php:104
+msgid "Keine offenen Aufträge."
+msgstr ""
+
+#: admin/views/settings-page.php:120
+msgid "Key rotieren"
+msgstr ""
+
+#: admin/views/history-page.php:111
+#: public/templates/history.php:59
+msgid "Käufer"
+msgstr ""
+
+#: public/templates/price-chart.php:100
+msgid "Lade Preis-Historie …"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:592
+#: public/templates/my.php:66
+#: public/templates/my.php:72
+#: public/templates/my.php:81
+#: public/templates/my.php:91
+#: public/templates/my.php:101
+msgid "Lade …"
+msgstr ""
+
+#: admin/views/tools-page.php:105
+msgid "Leert die Tabellen listings, transactions, balances, pending_actions, users. Plugin-Optionen (API-Key, Settings, Item-Map) bleiben erhalten. Die nächste Mod-Push-Anfrage stellt Listings/Balances/Transactions wieder her."
+msgstr ""
+
+#: admin/views/settings-page.php:63
+msgid "Letzter Upload: vor %d Sekunden"
+msgstr ""
+
+#: admin/views/pending-page.php:141
+msgid "Listing"
+msgstr ""
+
+#: public/templates/listing-detail.php:190
+msgid "Listing abbrechen"
+msgstr ""
+
+#: includes/class-psyern-ah-listings.php:475
+msgid "Listing not found."
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:599
+msgid "Listing wirklich abbrechen?"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:329
+msgid "Listing „%s\" nicht gefunden oder nicht mehr aktiv."
+msgstr ""
+
+#: admin/views/settings-page.php:206
+msgid "Listing-Detail-URL"
+msgstr ""
+
+#: admin/views/listings-page.php:96
+msgid "Listing-ID"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:595
+msgid "Listings"
+msgstr ""
+
+#: admin/views/settings-page.php:85
+msgid "Listings (last push)"
+msgstr ""
+
+#: admin/views/listings-page.php:49
+msgid "Listings-Service noch nicht geladen (Phase 2 nicht aktiv). Ansicht leer bis Service bereit ist."
+msgstr ""
+
+#: public/templates/my.php:27
+msgid "Login erforderlich"
+msgstr ""
+
+#: admin/views/history-page.php:82
+#: admin/views/listings-page.php:71
+msgid "M4A1, Gh0stWalker, ..."
+msgstr ""
+
+#: admin/views/settings-page.php:218
+msgid "Marketplace (öffentliche Auktionen)"
+msgstr ""
+
+#: public/templates/stats.php:155
+msgid "Max."
+msgstr ""
+
+#: public/templates/my.php:89
+msgid "Meine Gebote"
+msgstr ""
+
+#: public/templates/my.php:79
+msgid "Meine Listings"
+msgstr ""
+
+#: public/templates/marketplace.php:39
+msgid "Meiste Gebote"
+msgstr ""
+
+#: public/templates/stats.php:153
+msgid "Min."
+msgstr ""
+
+#: public/templates/my.php:32
+msgid "Mit Steam einloggen"
+msgstr ""
+
+#: admin/views/settings-page.php:174
+msgid "Mod → WP Full-Upload Frequenz. Default: 30. Min 10, max 3600."
+msgstr ""
+
+#: admin/views/settings-page.php:183
+msgid "Mod → WP Pending-Action-Poll Frequenz. Default: 10. Min 3, max 300."
+msgstr ""
+
+#: admin/views/settings-page.php:72
+msgid "Modus"
+msgstr ""
+
+#: admin/views/settings-page.php:221
+msgid "My (nur eingeloggt – eigene Listings/Gebote)"
+msgstr ""
+
+#: public/templates/marketplace.php:34
+msgid "Neueste"
+msgstr ""
+
+#: public/templates/my.php:99
+msgid "Offene Aufträge"
+msgstr ""
+
+#: admin/views/settings-page.php:141
+msgid "Optional. Für Avatar-Resolution. Get at <a href=\"https://steamcommunity.com/dev/apikey\" target=\"_blank\" rel=\"noopener\">steamcommunity.com/dev/apikey</a>"
+msgstr ""
+
+#: admin/views/settings-page.php:93
+msgid "Payload bytes"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:607
+msgid "Pending"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1107
+msgid "Pending-Actions service unavailable — cannot enqueue admin-cancel."
+msgstr ""
+
+#: admin/views/settings-page.php:202
+msgid "Per-Shortcode überschreibbar via theme=\"…\". Listet Framework-Themes + default-Fallback."
+msgstr ""
+
+#: admin/views/settings-page.php:178
+msgid "Poll-Intervall (Sek)"
+msgstr ""
+
+#: admin/views/history-page.php:112
+#: admin/views/listings-page.php:100
+#: public/templates/history.php:60
+msgid "Preis"
+msgstr ""
+
+#: public/templates/marketplace.php:36
+msgid "Preis absteigend"
+msgstr ""
+
+#: public/templates/marketplace.php:35
+msgid "Preis aufsteigend"
+msgstr ""
+
+#: public/templates/marketplace.php:103
+msgid "Preis von"
+msgstr ""
+
+#: public/templates/listing-detail.php:254
+#: public/templates/price-chart.php:74
+msgid "Preis-Historie"
+msgstr ""
+
+#: public/templates/price-chart.php:69
+msgid "Preis-Historie: %s"
+msgstr ""
+
+#: admin/views/tools-page.php:76
+msgid "Preis-History Cache"
+msgstr ""
+
+#: admin/views/tools-page.php:65
+msgid "Preis-History Cache und Stats Cache werden regelmäßig automatisch invalidiert. Nutze die Buttons nur, wenn du bemerkst, dass Änderungen nicht im Frontend sichtbar werden."
+msgstr ""
+
+#: public/templates/stats.php:75
+msgid "Preis-Trends"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:148
+#: admin/views/balances-page.php:33
+#: admin/views/history-page.php:33
+#: admin/views/listings-page.php:31
+#: admin/views/pending-page.php:58
+#: admin/views/settings-page.php:37
+#: admin/views/tools-page.php:22
+msgid "Psyerns AuctionHouse"
+msgstr ""
+
+#: admin/views/settings-page.php:214
+msgid "Public Visibility"
+msgstr ""
+
+#: admin/views/settings-page.php:169
+msgid "Push-Intervall (Sek)"
+msgstr ""
+
+#: admin/views/balances-page.php:66
+#: admin/views/balances-page.php:122
+msgid "Quelle"
+msgstr ""
+
+#: public/templates/stats.php:87
+msgid "Rang"
+msgstr ""
+
+#: admin/views/settings-page.php:255
+msgid "Rarity"
+msgstr ""
+
+#: admin/views/balances-page.php:57
+msgid "Read-only Mirror der Mod-Seite. Einzige Quelle der Wahrheit ist der Server — Änderungen hier sind nicht möglich."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1216
+msgid "Reset not performed: confirmation token mismatch (type RESET exactly)."
+msgstr ""
+
+#: public/templates/marketplace.php:38
+msgid "Restzeit absteigend"
+msgstr ""
+
+#: public/templates/marketplace.php:37
+msgid "Restzeit aufsteigend"
+msgstr ""
+
+#: admin/views/pending-page.php:144
+msgid "Result"
+msgstr ""
+
+#: admin/views/balances-page.php:86
+msgid "Richtung"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:546
+msgid "Rotate the API key now? The DayZ mod config must be updated with the new key or uploads will fail."
+msgstr ""
+
+#: admin/views/settings-page.php:239
+msgid "Schema v1: { version:1, default_icon_url, items: { item_class: { display_name?, icon_url, rarity?, category_hint? } } }. Erlaubte Rarities: common | uncommon | rare | epic | legendary."
+msgstr ""
+
+#: admin/views/balances-page.php:109
+#: admin/views/pending-page.php:127
+msgid "Seite %1$d / %2$d — %3$d Einträge"
+msgstr ""
+
+#: admin/views/history-page.php:95
+msgid "Seite %1$d / %2$d — %3$d Transaktionen"
+msgstr ""
+
+#: admin/views/listings-page.php:84
+msgid "Seite %1$d / %2$d — %3$d Treffer gesamt"
+msgstr ""
+
+#: public/templates/marketplace.php:180
+msgid "Seiten"
+msgstr ""
+
+#: admin/views/settings-page.php:80
+msgid "Server-Epoch"
+msgstr ""
+
+#: admin/views/settings-page.php:76
+msgid "Server-Time"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:591
+msgid "Settings"
+msgstr ""
+
+#: admin/views/tools-page.php:44
+msgid "Setzt ein Flag (TTL %d s), das die Mod beim nächsten Push konsumieren kann. In v1 ein No-Op — der Push ist ohnehin Full-Sync (README §13 #15)."
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:595
+msgid "Sofort kaufen"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:761
+#: public/templates/history.php:24
+#: public/templates/listing-card.php:48
+#: public/templates/listing-card.php:68
+#: public/templates/listing-card.php:115
+#: public/templates/listing-detail.php:137
+#: public/templates/listing-detail.php:146
+#: public/templates/marketplace.php:92
+msgid "Sofortkauf"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:798
+#: admin/views/listings-page.php:121
+msgid "Sold"
+msgstr ""
+
+#: admin/views/balances-page.php:77
+#: public/templates/marketplace.php:130
+msgid "Sortierung"
+msgstr ""
+
+#: admin/views/pending-page.php:140
+msgid "Spieler"
+msgstr ""
+
+#: admin/views/balances-page.php:81
+#: admin/views/balances-page.php:120
+msgid "Spieler-UID"
+msgstr ""
+
+#: public/templates/listing-card.php:54
+#: public/templates/listing-card.php:60
+#: public/templates/listing-detail.php:135
+msgid "Startpreis"
+msgstr ""
+
+#: public/templates/stats.php:42
+msgid "Statistiken"
+msgstr ""
+
+#: admin/views/settings-page.php:220
+msgid "Stats (Top-Seller / Preistrends)"
+msgstr ""
+
+#: admin/views/tools-page.php:85
+msgid "Stats Cache"
+msgstr ""
+
+#: admin/views/listings-page.php:58
+#: admin/views/listings-page.php:102
+#: admin/views/pending-page.php:85
+#: admin/views/pending-page.php:143
+msgid "Status"
+msgstr ""
+
+#: public/templates/listing-detail.php:247
+msgid "Status deiner Aktion"
+msgstr ""
+
+#: admin/views/settings-page.php:58
+msgid "Status: Kein Upload empfangen."
+msgstr ""
+
+#: admin/views/settings-page.php:134
+msgid "Steam API-Key"
+msgstr ""
+
+#: admin/views/settings-page.php:131
+msgid "Steam-API (optional)"
+msgstr ""
+
+#: public/templates/my.php:37
+msgid "Steam-Konto verknüpfen"
+msgstr ""
+
+#: admin/views/balances-page.php:121
+msgid "Steam-Name"
+msgstr ""
+
+#: public/templates/my.php:54
+msgid "Steam-UID:"
+msgstr ""
+
+#: public/templates/marketplace.php:53
+msgid "Suche"
+msgstr ""
+
+#: admin/views/listings-page.php:69
+msgid "Suche (Item oder Verkäufer)"
+msgstr ""
+
+#: admin/views/history-page.php:80
+msgid "Suche (Spieler / Item)"
+msgstr ""
+
+#: admin/views/balances-page.php:94
+msgid "Suche (UID / Name)"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:608
+msgid "T"
+msgstr ""
+
+#: admin/views/tools-page.php:109
+msgid "Tippe das Wort RESET (großgeschrieben, exakt) in das Feld, dann wird der Button aktiv."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:611
+msgid "Tools"
+msgstr ""
+
+#: public/templates/stats.php:66
+msgid "Top-Seller"
+msgstr ""
+
+#: admin/views/history-page.php:106
+msgid "Transaction-ID"
+msgstr ""
+
+#: admin/views/settings-page.php:89
+msgid "Transactions (last push)"
+msgstr ""
+
+#: admin/views/history-page.php:51
+msgid "Transactions-Service noch nicht geladen (Phase 2 nicht aktiv). Ansicht leer bis Service bereit ist."
+msgstr ""
+
+#: admin/views/history-page.php:60
+#: admin/views/history-page.php:108
+#: admin/views/listings-page.php:101
+#: admin/views/pending-page.php:139
+#: public/templates/history.php:61
+#: public/templates/marketplace.php:84
+msgid "Typ"
+msgstr ""
+
+#: admin/views/settings-page.php:210
+msgid "URL der Seite mit [psyerns_auctionhouse_listing]. Wird für Klicks aus Marketplace-Karten verwendet."
+msgstr ""
+
+#: admin/views/pending-page.php:138
+msgid "UUID"
+msgstr ""
+
+#: public/templates/my.php:29
+msgid "Um dein AuctionHouse-Profil, deine Listings und offene Gebote zu sehen, melde dich bitte über Steam an."
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:767
+msgid "Unbekannt"
+msgstr ""
+
+#: public/templates/history.php:36
+msgid "Verkaufs-Historie"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:781
+msgid "Verkauft"
+msgstr ""
+
+#: public/templates/stats.php:89
+#: public/templates/stats.php:156
+msgid "Verkäufe"
+msgstr ""
+
+#: admin/views/history-page.php:110
+#: admin/views/listings-page.php:97
+#: public/templates/history.php:58
+#: public/templates/stats.php:88
+msgid "Verkäufer"
+msgstr ""
+
+#: public/templates/listing-detail.php:108
+msgid "Verkäufer: %s"
+msgstr ""
+
+#: includes/class-psyern-ah-listings.php:598
+#: public/class-psyern-ah-shortcodes.php:615
+msgid "Verloren"
+msgstr ""
+
+#: admin/views/history-page.php:71
+#: admin/views/pending-page.php:109
+msgid "Von"
+msgstr ""
+
+#: admin/views/settings-page.php:248
+msgid "Vorschau (erste 5 Einträge)"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:604
+msgid "Wird ausgeführt"
+msgstr ""
+
+#: public/templates/price-chart.php:96
+msgid "Wähle ein Item, um die Preis-Historie zu sehen."
+msgstr ""
+
+#: admin/views/settings-page.php:161
+msgid "Währungsformat"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1324
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:565
+msgid "You do not have permission to view this page."
+msgstr ""
+
+#: includes/class-psyern-ah-listings.php:511
+#: includes/class-psyern-ah-listings.php:570
+msgid "Your WordPress account is not linked to a Steam UID."
+msgstr ""
+
+#: admin/views/history-page.php:107
+msgid "Zeit"
+msgstr ""
+
+#: public/templates/history.php:62
+msgid "Zeitpunkt"
+msgstr ""
+
+#: public/templates/price-chart.php:79
+#: public/templates/stats.php:43
+msgid "Zeitraum"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:603
+msgid "Zugestellt"
+msgstr ""
+
+#: admin/views/balances-page.php:79
+#: admin/views/balances-page.php:124
+msgid "Zuletzt aktualisiert"
+msgstr ""
+
+#: public/templates/marketplace.php:150
+msgid "Zurücksetzen"
+msgstr ""
+
+#: admin/views/tools-page.php:108
+msgid "Zwei-Schritt-Bestätigung:"
+msgstr ""
+
+#: admin/views/listings-page.php:166
+#: public/class-psyern-ah-shortcodes.php:607
+#: public/class-psyern-ah-shortcodes.php:838
+msgid "abgelaufen"
+msgstr ""
+
+#: public/templates/marketplace.php:115
+msgid "bis"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:609
+msgid "h"
+msgstr ""
+
+#: includes/class-psyern-ah-stats.php:379
+msgid "item_class parameter is required."
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:610
+msgid "m"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:843
+msgid "noch %s"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1177
+msgid "price-history cache"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1181
+msgid "price-history transients"
+msgstr ""
+
+#: public/class-psyern-ah-shortcodes.php:611
+msgid "s"
+msgstr ""
+
+#: admin/class-psyern-ah-admin.php:1187
+msgid "stats transients"
+msgstr ""
+
+#: public/templates/listing-card.php:149
+msgid "von %s"
+msgstr ""
+
+#: admin/views/settings-page.php:165
+msgid "{amount} wird durch den Betrag ersetzt. Beispiel: \"{amount} ₽\" oder \"${amount}\"."
+msgstr ""
+
+#: public/templates/stats.php:154
+msgid "Ø"
+msgstr ""
+
+#: public/templates/stats.php:72
+msgid "Ø-Preise"
+msgstr ""
+
+#: includes/class-psyern-ah-listings.php:602
+#: public/class-psyern-ah-shortcodes.php:613
+msgid "Überboten"
+msgstr ""
+
+#: public/templates/stats.php:197
+msgid "— Item wählen —"
+msgstr ""
+
