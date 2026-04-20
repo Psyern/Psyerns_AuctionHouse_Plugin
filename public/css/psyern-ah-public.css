@@ -1,0 +1,713 @@
+/*
+ * Psyerns AuctionHouse — base stylesheet
+ *
+ * Owns every component class emitted by the Agent 7 shortcode templates plus
+ * the JS-driven UI (toast, modal, skeleton). All visual tokens are exposed as
+ * CSS custom properties on `.psyern-ah-ui` so that Framework themes can
+ * re-skin the plugin with a single variable override.
+ */
+
+/* =========================================================================
+   TOKENS
+   ========================================================================= */
+
+.psyern-ah-ui {
+	--pf-ah-bg: #0b0c10;
+	--pf-ah-panel: #14161d;
+	--pf-ah-text: #e6e6e6;
+	--pf-ah-text-muted: #8c8f99;
+	--pf-ah-accent: #c9a96b;
+	--pf-ah-accent-hover: #e0bf80;
+	--pf-ah-danger: #c04a3a;
+	--pf-ah-success: #3fa55a;
+	--pf-ah-border: #2a2d36;
+
+	/* rarity palette — used by .psyern-ah-listing-card--rarity-* */
+	--pf-ah-rarity-common: #9d9d9d;
+	--pf-ah-rarity-uncommon: #3fa55a;
+	--pf-ah-rarity-rare: #4a90ff;
+	--pf-ah-rarity-epic: #a855f7;
+	--pf-ah-rarity-legendary: #f0a030;
+
+	/* derived */
+	--pf-ah-radius: 8px;
+	--pf-ah-radius-sm: 4px;
+	--pf-ah-gap: 1rem;
+	--pf-ah-transition: 0.18s ease;
+
+	color: var(--pf-ah-text);
+	background: var(--pf-ah-bg);
+	font-family: -apple-system, blinkmacsystemfont, 'segoe ui', roboto, oxygen, ubuntu, sans-serif;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	padding: 1rem;
+	border-radius: var(--pf-ah-radius);
+}
+
+.psyern-ah-ui *,
+.psyern-ah-ui *::before,
+.psyern-ah-ui *::after {
+	box-sizing: border-box;
+}
+
+.psyern-ah-ui a {
+	color: var(--pf-ah-accent);
+	text-decoration: none;
+	transition: color var(--pf-ah-transition);
+}
+
+.psyern-ah-ui a:hover {
+	color: var(--pf-ah-accent-hover);
+}
+
+/* =========================================================================
+   BUTTONS
+   ========================================================================= */
+
+.psyern-ah-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4rem;
+	padding: 0.55rem 1.05rem;
+	border: 1px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius-sm);
+	background: var(--pf-ah-panel);
+	color: var(--pf-ah-text);
+	font-family: inherit;
+	font-size: 0.9rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background var(--pf-ah-transition), border-color var(--pf-ah-transition), color var(--pf-ah-transition), transform var(--pf-ah-transition);
+	text-decoration: none;
+	user-select: none;
+}
+
+.psyern-ah-button:hover {
+	background: var(--pf-ah-border);
+}
+
+.psyern-ah-button:active {
+	transform: translateY(1px);
+}
+
+.psyern-ah-button--primary {
+	background: var(--pf-ah-accent);
+	border-color: var(--pf-ah-accent);
+	color: #1a1a1a;
+}
+
+.psyern-ah-button--primary:hover {
+	background: var(--pf-ah-accent-hover);
+	border-color: var(--pf-ah-accent-hover);
+	color: #0b0c10;
+}
+
+.psyern-ah-button--secondary {
+	background: transparent;
+	border-color: var(--pf-ah-border);
+	color: var(--pf-ah-text);
+}
+
+.psyern-ah-button--secondary:hover {
+	border-color: var(--pf-ah-accent);
+	color: var(--pf-ah-accent);
+}
+
+.psyern-ah-button--danger {
+	background: var(--pf-ah-danger);
+	border-color: var(--pf-ah-danger);
+	color: #fff;
+}
+
+.psyern-ah-button--danger:hover {
+	background: #a63b2d;
+	border-color: #a63b2d;
+}
+
+.psyern-ah-button--disabled,
+.psyern-ah-button[disabled],
+.psyern-ah-button[aria-disabled='true'] {
+	opacity: 0.5;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+/* =========================================================================
+   FORM INPUTS
+   ========================================================================= */
+
+.psyern-ah-form-input {
+	display: block;
+	width: 100%;
+	padding: 0.5rem 0.75rem;
+	background: var(--pf-ah-bg);
+	color: var(--pf-ah-text);
+	border: 1px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius-sm);
+	font: inherit;
+	transition: border-color var(--pf-ah-transition), box-shadow var(--pf-ah-transition);
+}
+
+.psyern-ah-form-input:focus {
+	outline: none;
+	border-color: var(--pf-ah-accent);
+	box-shadow: 0 0 0 2px rgba(201, 169, 107, 0.25);
+}
+
+.psyern-ah-form-input::placeholder {
+	color: var(--pf-ah-text-muted);
+}
+
+.psyern-ah-form-input--error {
+	border-color: var(--pf-ah-danger);
+	box-shadow: 0 0 0 2px rgba(192, 74, 58, 0.25);
+}
+
+/* =========================================================================
+   MARKETPLACE
+   ========================================================================= */
+
+.psyern-ah-marketplace {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pf-ah-gap);
+}
+
+.psyern-ah-marketplace__filter {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	padding: 0.75rem;
+	background: var(--pf-ah-panel);
+	border: 1px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius);
+}
+
+.psyern-ah-marketplace__filter-input {
+	flex: 1 1 160px;
+	min-width: 140px;
+	padding: 0.5rem 0.75rem;
+	background: var(--pf-ah-bg);
+	color: var(--pf-ah-text);
+	border: 1px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius-sm);
+	font: inherit;
+	transition: border-color var(--pf-ah-transition);
+}
+
+.psyern-ah-marketplace__filter-input:focus {
+	outline: none;
+	border-color: var(--pf-ah-accent);
+}
+
+.psyern-ah-marketplace__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--pf-ah-gap);
+}
+
+.psyern-ah-marketplace__pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 1rem 0 0.25rem;
+	flex-wrap: wrap;
+}
+
+.psyern-ah-marketplace__pagination .psyern-ah-button {
+	min-width: 2.25rem;
+	padding: 0.4rem 0.75rem;
+}
+
+/* =========================================================================
+   LISTING CARD (BEM)
+   ========================================================================= */
+
+.psyern-ah-listing-card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 0.75rem;
+	background: var(--pf-ah-panel);
+	border: 2px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius);
+	transition: transform var(--pf-ah-transition), border-color var(--pf-ah-transition), box-shadow var(--pf-ah-transition);
+	position: relative;
+	overflow: hidden;
+}
+
+.psyern-ah-listing-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.psyern-ah-listing-card__icon {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+	background: var(--pf-ah-bg);
+	border-radius: var(--pf-ah-radius-sm);
+	border: 1px solid var(--pf-ah-border);
+}
+
+.psyern-ah-listing-card__title {
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: var(--pf-ah-text);
+	margin: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.psyern-ah-listing-card__price {
+	font-size: 1.05rem;
+	font-weight: 700;
+	color: var(--pf-ah-accent);
+}
+
+.psyern-ah-listing-card__price--highlighted {
+	color: var(--pf-ah-success);
+	text-shadow: 0 0 6px rgba(63, 165, 90, 0.35);
+}
+
+.psyern-ah-listing-card__seller {
+	font-size: 0.8rem;
+	color: var(--pf-ah-text-muted);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.psyern-ah-listing-card__countdown {
+	font-size: 0.8rem;
+	color: var(--pf-ah-text-muted);
+	font-variant-numeric: tabular-nums;
+}
+
+.psyern-ah-listing-card__badge {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	padding: 0.15rem 0.5rem;
+	font-size: 0.7rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	background: var(--pf-ah-bg);
+	border: 1px solid var(--pf-ah-border);
+	border-radius: 999px;
+	color: var(--pf-ah-text);
+}
+
+/* Rarity modifiers — CSS variables enable theme overrides */
+.psyern-ah-listing-card--rarity-common {
+	border-color: var(--pf-ah-rarity-common);
+}
+
+.psyern-ah-listing-card--rarity-uncommon {
+	border-color: var(--pf-ah-rarity-uncommon);
+	box-shadow: 0 0 0 1px rgba(63, 165, 90, 0.15);
+}
+
+.psyern-ah-listing-card--rarity-rare {
+	border-color: var(--pf-ah-rarity-rare);
+	box-shadow: 0 0 0 1px rgba(74, 144, 255, 0.2);
+}
+
+.psyern-ah-listing-card--rarity-epic {
+	border-color: var(--pf-ah-rarity-epic);
+	box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.22);
+}
+
+.psyern-ah-listing-card--rarity-legendary {
+	border-color: var(--pf-ah-rarity-legendary);
+	box-shadow: 0 0 10px rgba(240, 160, 48, 0.25);
+}
+
+/* =========================================================================
+   LISTING DETAIL
+   ========================================================================= */
+
+.psyern-ah-listing-detail {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--pf-ah-gap);
+	padding: 1rem;
+	background: var(--pf-ah-panel);
+	border: 1px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius);
+}
+
+.psyern-ah-listing-detail__image {
+	width: 100%;
+	max-width: 320px;
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+	background: var(--pf-ah-bg);
+	border: 1px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius-sm);
+}
+
+.psyern-ah-listing-detail__info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+
+.psyern-ah-listing-detail__panel {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	padding: 0.9rem;
+	background: var(--pf-ah-bg);
+	border: 1px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius-sm);
+}
+
+.psyern-ah-listing-detail__price-chart {
+	margin-top: 1rem;
+	padding: 0.75rem;
+	background: var(--pf-ah-bg);
+	border: 1px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius);
+}
+
+/* =========================================================================
+   MY / DASHBOARD
+   ========================================================================= */
+
+.psyern-ah-my {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pf-ah-gap);
+}
+
+.psyern-ah-my__balance-card {
+	padding: 1rem 1.25rem;
+	background: var(--pf-ah-panel);
+	border: 1px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.psyern-ah-my__balance-card strong {
+	font-size: 1.4rem;
+	color: var(--pf-ah-accent);
+	font-variant-numeric: tabular-nums;
+}
+
+.psyern-ah-my__tabs {
+	display: flex;
+	gap: 0.25rem;
+	border-bottom: 1px solid var(--pf-ah-border);
+	flex-wrap: wrap;
+}
+
+.psyern-ah-my__tab {
+	padding: 0.6rem 1rem;
+	background: transparent;
+	border: 1px solid transparent;
+	border-bottom: none;
+	border-radius: var(--pf-ah-radius-sm) var(--pf-ah-radius-sm) 0 0;
+	color: var(--pf-ah-text-muted);
+	cursor: pointer;
+	font: inherit;
+	font-weight: 600;
+	transition: color var(--pf-ah-transition), background var(--pf-ah-transition), border-color var(--pf-ah-transition);
+}
+
+.psyern-ah-my__tab:hover {
+	color: var(--pf-ah-text);
+}
+
+.psyern-ah-my__tab[aria-selected='true'],
+.psyern-ah-my__tab.is-active {
+	color: var(--pf-ah-accent);
+	border-color: var(--pf-ah-border);
+	background: var(--pf-ah-panel);
+}
+
+.psyern-ah-my__pending-action {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.6rem 0.9rem;
+	background: var(--pf-ah-panel);
+	border: 1px solid var(--pf-ah-border);
+	border-left-width: 4px;
+	border-radius: var(--pf-ah-radius-sm);
+	margin-bottom: 0.5rem;
+}
+
+.psyern-ah-my__pending-action--status-queued {
+	border-left-color: var(--pf-ah-text-muted);
+}
+
+.psyern-ah-my__pending-action--status-dispatched {
+	border-left-color: var(--pf-ah-accent);
+}
+
+.psyern-ah-my__pending-action--status-success {
+	border-left-color: var(--pf-ah-success);
+}
+
+.psyern-ah-my__pending-action--status-failed {
+	border-left-color: var(--pf-ah-danger);
+}
+
+/* =========================================================================
+   HISTORY / STATS
+   ========================================================================= */
+
+.psyern-ah-history {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 0.5rem;
+	background: var(--pf-ah-panel);
+	border: 1px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius);
+}
+
+.psyern-ah-history__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.5rem 0.75rem;
+	border-bottom: 1px solid var(--pf-ah-border);
+}
+
+.psyern-ah-history__item:last-child {
+	border-bottom: none;
+}
+
+.psyern-ah-stats {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pf-ah-gap);
+	padding: 1rem;
+	background: var(--pf-ah-panel);
+	border: 1px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius);
+}
+
+.psyern-ah-stats__tabs {
+	display: flex;
+	gap: 0.25rem;
+	flex-wrap: wrap;
+	margin-bottom: 0.5rem;
+}
+
+.psyern-ah-stats__tab {
+	padding: 0.4rem 0.9rem;
+	background: transparent;
+	border: 1px solid var(--pf-ah-border);
+	border-radius: 999px;
+	color: var(--pf-ah-text-muted);
+	cursor: pointer;
+	font: inherit;
+	font-size: 0.85rem;
+	transition: all var(--pf-ah-transition);
+}
+
+.psyern-ah-stats__tab:hover {
+	color: var(--pf-ah-text);
+	border-color: var(--pf-ah-accent);
+}
+
+.psyern-ah-stats__tab[aria-selected='true'],
+.psyern-ah-stats__tab.is-active {
+	color: var(--pf-ah-accent);
+	border-color: var(--pf-ah-accent);
+	background: rgba(201, 169, 107, 0.08);
+}
+
+/* =========================================================================
+   PRICE CHART
+   ========================================================================= */
+
+.psyern-ah-price-chart {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	width: 100%;
+}
+
+.psyern-ah-price-chart canvas {
+	max-width: 100%;
+	height: auto;
+}
+
+.psyern-ah-price-chart__periods {
+	display: flex;
+	gap: 0.25rem;
+	flex-wrap: wrap;
+}
+
+.psyern-ah-price-chart__periods .psyern-ah-button {
+	padding: 0.3rem 0.8rem;
+	font-size: 0.8rem;
+	min-width: 3rem;
+}
+
+/* =========================================================================
+   MODAL
+   ========================================================================= */
+
+.psyern-ah-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 100000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.psyern-ah-modal[hidden] {
+	display: none;
+}
+
+.psyern-ah-modal__backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(2px);
+}
+
+.psyern-ah-modal__body {
+	position: relative;
+	z-index: 1;
+	max-width: 520px;
+	width: 100%;
+	max-height: calc(100vh - 2rem);
+	overflow-y: auto;
+	padding: 1.25rem;
+	background: var(--pf-ah-panel);
+	color: var(--pf-ah-text);
+	border: 1px solid var(--pf-ah-border);
+	border-radius: var(--pf-ah-radius);
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================================================================
+   TOASTS
+   ========================================================================= */
+
+.psyern-ah-toast {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	z-index: 100001;
+	min-width: 220px;
+	max-width: 360px;
+	padding: 0.7rem 1rem;
+	background: var(--pf-ah-panel);
+	color: var(--pf-ah-text);
+	border: 1px solid var(--pf-ah-border);
+	border-left-width: 4px;
+	border-radius: var(--pf-ah-radius-sm);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+	font-size: 0.9rem;
+	animation: psyern-ah-toast-in 0.2s ease-out;
+}
+
+.psyern-ah-toast--success {
+	border-left-color: var(--pf-ah-success);
+}
+
+.psyern-ah-toast--error {
+	border-left-color: var(--pf-ah-danger);
+}
+
+@keyframes psyern-ah-toast-in {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* =========================================================================
+   SKELETON LOADER
+   ========================================================================= */
+
+.psyern-ah-skeleton {
+	display: block;
+	background: linear-gradient(90deg, var(--pf-ah-panel) 0%, var(--pf-ah-border) 50%, var(--pf-ah-panel) 100%);
+	background-size: 200% 100%;
+	border-radius: var(--pf-ah-radius-sm);
+	animation: psyern-ah-skeleton-pulse 1.4s linear infinite;
+	min-height: 1rem;
+}
+
+@keyframes psyern-ah-skeleton-pulse {
+	0% {
+		background-position: 200% 0;
+	}
+	100% {
+		background-position: -200% 0;
+	}
+}
+
+/* =========================================================================
+   EMPTY STATE
+   ========================================================================= */
+
+.psyern-ah-empty-state {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 2.5rem 1rem;
+	color: var(--pf-ah-text-muted);
+	text-align: center;
+}
+
+.psyern-ah-empty-state__icon {
+	font-size: 2.5rem;
+	opacity: 0.5;
+}
+
+.psyern-ah-empty-state__message {
+	font-size: 0.95rem;
+}
+
+/* =========================================================================
+   RESPONSIVE
+   ========================================================================= */
+
+@media (min-width: 768px) {
+	.psyern-ah-marketplace__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.psyern-ah-listing-detail {
+		grid-template-columns: minmax(240px, 320px) 1fr;
+		align-items: start;
+	}
+}
+
+@media (min-width: 1024px) {
+	.psyern-ah-marketplace__grid {
+		grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	}
+
+	.psyern-ah-listing-detail {
+		grid-template-columns: minmax(280px, 360px) 1fr minmax(240px, 300px);
+	}
+}
