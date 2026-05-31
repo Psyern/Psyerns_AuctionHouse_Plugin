@@ -105,8 +105,9 @@
 	// Confirm modal (self-built)
 	// ---------------------------------------------------------------
 
-	const confirmModal = ( title, body ) => {
+	const confirmModal = ( title, body, container ) => {
 		return new Promise( ( resolve ) => {
+			const host = container && container.closest ? container.closest( '.psyern-ah-theme-default, [class*="psyern-ah-theme-"]' ) : null;
 			const backdrop = document.createElement( 'div' );
 			backdrop.className = 'psyern-ah-modal-backdrop';
 			const modal = document.createElement( 'div' );
@@ -141,7 +142,11 @@
 			modal.appendChild( b );
 			modal.appendChild( foot );
 			backdrop.appendChild( modal );
-			document.body.appendChild( backdrop );
+			if ( host ) {
+				host.appendChild( backdrop );
+			} else {
+				document.body.appendChild( backdrop );
+			}
 
 			const close = ( answer ) => {
 				if ( backdrop.parentNode ) {
@@ -364,7 +369,8 @@
 
 		const ok = await confirmModal(
 			t( 'confirm_purchase_title', 'Kauf bestätigen' ),
-			( t( 'confirm_purchase', 'Wirklich kaufen für {price}?' ) ).replace( '{price}', fmtPrice( price ) )
+			( t( 'confirm_purchase', 'Wirklich kaufen für {price}?' ) ).replace( '{price}', fmtPrice( price ) ),
+			container
 		);
 		if ( ! ok ) {
 			return;
@@ -410,7 +416,8 @@
 
 		const ok = await confirmModal(
 			t( 'confirm_bid_title', 'Gebot bestätigen' ),
-			( t( 'confirm_bid', 'Gebot {price} platzieren?' ) ).replace( '{price}', fmtPrice( amount ) )
+			( t( 'confirm_bid', 'Gebot {price} platzieren?' ) ).replace( '{price}', fmtPrice( amount ) ),
+			container
 		);
 		if ( ! ok ) {
 			return;
@@ -441,7 +448,8 @@
 		const listingId = container.getAttribute( 'data-listing-id' );
 		const ok = await confirmModal(
 			t( 'confirm_cancel_title', 'Listing zurückziehen' ),
-			t( 'confirm_cancel', 'Listing wirklich zurückziehen?' )
+			t( 'confirm_cancel', 'Listing wirklich zurückziehen?' ),
+			container
 		);
 		if ( ! ok ) {
 			return;

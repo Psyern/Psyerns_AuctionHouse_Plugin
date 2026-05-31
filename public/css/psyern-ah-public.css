@@ -564,7 +564,7 @@
    MODAL
    ========================================================================= */
 
-.psyern-ah-modal {
+.psyern-ah-modal-backdrop {
 	position: fixed;
 	inset: 0;
 	z-index: 100000;
@@ -572,32 +572,78 @@
 	align-items: center;
 	justify-content: center;
 	padding: 1rem;
-}
-
-.psyern-ah-modal[hidden] {
-	display: none;
-}
-
-.psyern-ah-modal__backdrop {
-	position: absolute;
-	inset: 0;
 	background: rgba(0, 0, 0, 0.6);
 	backdrop-filter: blur(2px);
 }
 
-.psyern-ah-modal__body {
-	position: relative;
-	z-index: 1;
+
+.psyern-ah-modal {
 	max-width: 520px;
 	width: 100%;
 	max-height: calc(100vh - 2rem);
 	overflow-y: auto;
-	padding: 1.25rem;
-	background: var(--pf-ah-panel);
-	color: var(--pf-ah-text);
-	border: 1px solid var(--pf-ah-border);
-	border-radius: var(--pf-ah-radius);
+	padding: 1rem;
+	background: var(--pf-ah-panel, #14161d);
+	color: var(--pf-ah-text, #e6e6e6);
+	border: 1px solid var(--pf-ah-border, #2a2d36);
+	border-radius: var(--pf-ah-radius, 8px);
 	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.psyern-ah-modal__title {
+	margin: 0 0 0.7rem;
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--pf-ah-accent, #c9a96b);
+	line-height: 1.35;
+}
+
+.psyern-ah-modal__body {
+	margin: 0;
+	color: var(--pf-ah-text, #e6e6e6);
+	line-height: 1.5;
+}
+
+.psyern-ah-modal__footer {
+	display: flex;
+	justify-content: flex-end;
+	gap: 0.5rem;
+	margin-top: 1rem;
+	padding-top: 0.85rem;
+	border-top: 1px solid var(--pf-ah-border, #2a2d36);
+}
+
+.psyern-ah-modal__btn {
+	appearance: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 0.9rem;
+	border-radius: var(--pf-ah-radius-sm, 4px);
+	border: 1px solid var(--pf-ah-border, #2a2d36);
+	background: var(--pf-ah-panel, #14161d);
+	color: var(--pf-ah-text, #e6e6e6);
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background var(--pf-ah-transition, 0.18s ease), border-color var(--pf-ah-transition, 0.18s ease), color var(--pf-ah-transition, 0.18s ease);
+}
+
+.psyern-ah-modal__btn:hover {
+	border-color: var(--pf-ah-accent, #c9a96b);
+	color: var(--pf-ah-accent, #c9a96b);
+}
+
+.psyern-ah-modal__btn--ok {
+	background: var(--pf-ah-accent, #c9a96b);
+	border-color: var(--pf-ah-accent, #c9a96b);
+	color: #111;
+}
+
+.psyern-ah-modal__btn--ok:hover {
+	background: var(--pf-ah-accent-hover, #e0bf80);
+	border-color: var(--pf-ah-accent-hover, #e0bf80);
+	color: #111;
 }
 
 /* =========================================================================
